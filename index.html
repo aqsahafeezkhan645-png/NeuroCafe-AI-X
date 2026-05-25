@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>NeuroCafe AI X</title>
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}">
+
+    <!-- ICONS -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- CURSOR GLOW -->
+
+<div class="cursor-glow"></div>
+
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+
+    <div class="logo">
+
+        ☕ NeuroCafe
+
+    </div>
+
+    <ul id="sidebarMenu">
+
+        <li class="nav-item active"
+            onclick="activateMenu(this,'dashboardSection')">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            Dashboard
+
+        </li>
+
+        <li class="nav-item"
+            onclick="activateMenu(this,'aiTutorSection')">
+
+            <i class="fa-solid fa-robot"></i>
+
+            AI Tutor
+
+        </li>
+
+        <li class="nav-item"
+            onclick="activateMenu(this,'quizSection')">
+
+            <i class="fa-solid fa-book"></i>
+
+            Quiz Generator
+
+        </li>
+
+        <li class="nav-item"
+            onclick="activateMenu(this,'plannerSection')">
+
+            <i class="fa-solid fa-calendar"></i>
+
+            Study Planner
+
+        </li>
+
+        <li class="nav-item"
+            onclick="activateMenu(this,'weakSection')">
+
+            <i class="fa-solid fa-brain"></i>
+
+            Weak Areas
+
+        </li>
+
+        <li class="nav-item"
+            onclick="activateMenu(this,'analyticsSection')">
+
+            <i class="fa-solid fa-chart-simple"></i>
+
+            Analytics
+
+        </li>
+
+    </ul>
+
+</div>
+
+<!-- MAIN CONTENT -->
+
+<div class="main-content">
+
+    <!-- HEADER -->
+
+    <header>
+
+        <h1>NeuroCafe AI X</h1>
+
+        <p>
+            Smart Multi-Agent AI Learning Environment
+        </p>
+
+        <div id="liveClock"
+            class="live-clock">
+
+            🕒 Loading...
+
+        </div>
+
+    </header>
+
+    <!-- STATS -->
+
+    <div class="stats-grid"
+        id="dashboardSection">
+
+        <div class="stat-card">
+
+            <h3>📈 Productivity</h3>
+
+            <div class="counter"
+                data-target="92">
+
+                0
+
+            </div>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h3>🎯 Focus</h3>
+
+            <div class="status-text">
+
+                High
+
+            </div>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h3>⚡ Energy</h3>
+
+            <div class="status-text">
+
+                Active
+
+            </div>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h3>🤖 AI Confidence</h3>
+
+            <div class="counter"
+                data-target="98">
+
+                0
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- DASHBOARD GRID -->
+
+    <div class="dashboard-grid">
+
+        <!-- LEFT PANEL -->
+
+        <div class="glass-card"
+            id="plannerSection">
+
+            <h2>🧠 Student Preferences</h2>
+
+            <select>
+
+                <option>Deep Focus</option>
+
+                <option>Revision Mode</option>
+
+            </select>
+
+            <select>
+
+                <option>Focused</option>
+
+                <option>Relaxed</option>
+
+            </select>
+
+            <select>
+
+                <option>6 Study Hours</option>
+
+                <option>8 Study Hours</option>
+
+            </select>
+
+            <select>
+
+                <option>Silent</option>
+
+                <option>Music</option>
+
+            </select>
+
+            <button class="glow-btn">
+
+                🚀 Activate AI Agents
+
+            </button>
+
+            <!-- AI RESULTS -->
+
+            <div style="margin-top:30px;">
+
+                <h2>🤖 AI Agent Results</h2>
+
+                <ul class="recommend-list">
+
+                    <li>
+                        ✔ Seat Allocation:
+                        Window Side
+                    </li>
+
+                    <li>
+                        ✔ Cognitive Analysis:
+                        Highly Focused
+                    </li>
+
+                    <li>
+                        ✔ Break Recommendation:
+                        Take 10 min break
+                    </li>
+
+                    <li>
+                        ✔ Nutrition:
+                        Coffee + Dark Chocolate
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- CENTER PANEL -->
+
+        <div class="glass-card"
+            id="aiTutorSection">
+
+            <h2>🤖 NeuroCafe AI Tutor</h2>
+
+            <div class="ai-status">
+
+                ● AI LIVE
+
+            </div>
+
+            <!-- CHAT BOX -->
+
+            <div class="chat-box"
+                id="chatBox">
+
+                <div class="ai-message">
+
+                    👋 Hello! I am your
+                    NeuroCafe AI Tutor.
+
+                    <br><br>
+
+                    I can help you with:
+
+                    <ul>
+
+                        <li>✅ AI Teaching</li>
+
+                        <li>✅ Coding Help</li>
+
+                        <li>✅ Personalized Study Plans</li>
+
+                        <li>✅ Quiz Generation</li>
+
+                        <li>✅ Assignment Help</li>
+
+                        <li>✅ Weak Area Detection</li>
+
+                        <li>✅ Smart Evaluation</li>
+
+                        <li>✅ Productivity Coaching</li>
+
+                    </ul>
+
+                    🚀 Ask me anything to begin.
+
+                </div>
+
+            </div>
+
+            <!-- INPUT -->
+
+            <textarea id="userInput"
+                placeholder="Ask AI Tutor anything..."></textarea>
+
+            <!-- BUTTONS -->
+
+            <div class="button-group">
+
+                <button class="glow-btn"
+                    onclick="askAI()">
+
+                    <i class="fa-solid fa-paper-plane"></i>
+
+                    Ask AI
+
+                </button>
+
+                <button class="icon-btn">
+
+                    <i class="fa-solid fa-microphone"></i>
+
+                </button>
+
+                <button class="icon-btn">
+
+                    <i class="fa-solid fa-download"></i>
+
+                </button>
+
+                <button class="icon-btn">
+
+                    <i class="fa-solid fa-trash"></i>
+
+                </button>
+
+            </div>
+
+            <!-- QUICK ACTIONS -->
+
+            <div class="quick-actions">
+
+                <button onclick="quickPrompt('Explain AI concepts simply')">
+
+                    Explain AI
+
+                </button>
+
+                <button onclick="quickPrompt('Generate a quiz on Python')">
+
+                    Generate Quiz
+
+                </button>
+
+                <button onclick="quickPrompt('Create a study plan for exams')">
+
+                    Study Planner
+
+                </button>
+
+                <button onclick="quickPrompt('Evaluate my learning performance')">
+
+                    Evaluate Me
+
+                </button>
+
+                <button onclick="quickPrompt('Find my weak areas')">
+
+                    Weak Areas
+
+                </button>
+
+                <button onclick="quickPrompt('Help me with coding')">
+
+                    Coding Help
+
+                </button>
+
+            </div>
+
+            <!-- MEMORY SYSTEM -->
+
+            <div class="glass-card"
+                id="weakSection"
+                style="margin-top:25px;">
+
+                <h2>🧠 Learning Memory</h2>
+
+                <ul class="recommend-list">
+
+                    <li>
+                        Weak in Neural Networks
+                    </li>
+
+                    <li>
+                        Needs revision in Python Loops
+                    </li>
+
+                    <li>
+                        Strong performance in HTML/CSS
+                    </li>
+
+                    <li>
+                        Recommended AI quiz practice
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT PANEL -->
+
+        <div class="glass-card"
+            id="quizSection">
+
+            <h2>🟢 AI Agent Status</h2>
+
+            <div class="agent-status">
+
+                Cognitive Agent Online
+
+            </div>
+
+            <div class="agent-status">
+
+                Mood Agent Active
+
+            </div>
+
+            <div class="agent-status">
+
+                Tutor Agent Connected
+
+            </div>
+
+            <div class="agent-status">
+
+                Quiz Generator Active
+
+            </div>
+
+            <div class="agent-status">
+
+                Evaluation Agent Ready
+
+            </div>
+
+            <div class="agent-status">
+
+                Planner Agent Running
+
+            </div>
+
+            <div class="agent-status">
+
+                Memory System Learning
+
+            </div>
+
+            <!-- AI FEATURES -->
+
+            <div style="margin-top:30px;">
+
+                <h2>⚡ AI Features</h2>
+
+                <ul class="recommend-list">
+
+                    <li>
+                        ✔ Personalized Study Plans
+                    </li>
+
+                    <li>
+                        ✔ AI Quiz Generation
+                    </li>
+
+                    <li>
+                        ✔ Smart Answer Evaluation
+                    </li>
+
+                    <li>
+                        ✔ Weak Area Detection
+                    </li>
+
+                    <li>
+                        ✔ Fast AI Responses
+                    </li>
+
+                    <li>
+                        ✔ AI-Based Learning Support
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- BOTTOM GRID -->
+
+    <div class="bottom-grid">
+
+        <!-- AI AGENTS -->
+
+        <div class="glass-card">
+
+            <h2>🤖 AI Agents</h2>
+
+            <div class="analytics-grid">
+
+                <div class="analytic-box">
+
+                    <h3>📅 Planner Agent</h3>
+
+                    <p>Study Schedules</p>
+
+                </div>
+
+                <div class="analytic-box">
+
+                    <h3>❓ Quiz Agent</h3>
+
+                    <p>MCQ Generation</p>
+
+                </div>
+
+                <div class="analytic-box">
+
+                    <h3>✅ Evaluation Agent</h3>
+
+                    <p>Answer Checking</p>
+
+                </div>
+
+                <div class="analytic-box">
+
+                    <h3>🧠 Memory System</h3>
+
+                    <p>Weak Area Tracking</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- PERFORMANCE -->
+
+        <div class="glass-card"
+            id="analyticsSection">
+
+            <h2>📈 Performance Analytics</h2>
+
+            <div class="analytics-grid">
+
+                <div class="analytic-box">
+
+                    <h3>🎯 Accuracy</h3>
+
+                    <p>98%</p>
+
+                </div>
+
+                <div class="analytic-box">
+
+                    <h3>⚡ Response</h3>
+
+                    <p>Fast AI</p>
+
+                </div>
+
+                <div class="analytic-box">
+
+                    <h3>🧠 Learning</h3>
+
+                    <p>Adaptive</p>
+
+                </div>
+
+                <div class="analytic-box">
+
+                    <h3>📚 Support</h3>
+
+                    <p>24/7</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            🚀 NeuroCafe AI X |
+            Multi-Agent Educational AI Platform
+        </p>
+
+        <p>
+            Developed for AI Exhibition
+        </p>
+
+    </footer>
+
+</div>
+
+<!-- JAVASCRIPT -->
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
